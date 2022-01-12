@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{%block title %}Contact{%endblock title %}
+
+{%block body %}  
+<div class ="container-fluid px-0 mb-3">
+    <img src="  https://images.unsplash.com/photo-1613290907219-ee677464bd45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=100 px-0" alt="...">
+</div>
+<div class ='container '> 
+    <h1 class="text-center">Contact Us</h1>
+    
+    <form class="row g-3 needs-validation" novalidate>
+        <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="col-md-4">
+          <label for="first" class="form-label">First name</label>
+          <input type="text" class="form-control" id="first"  placeholder="First Name" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for=" last" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="last name" placeholder="Last Name" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="model" class="form-label">Phone's Name with Model</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">BRAND</span>
+            <input type="text" class="form-control" id=" model" aria-describedby="inputGroupPrepend" placeholder="Smartphone Brand" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="City" class="form-label">City</label>
+          <input type="text" class="form-control" id="City" placeholder="City" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Madhya Pradesh</option>
+            <option>Uttar Pradesh </option>
+            <option>Tamil Nadu</option>
+            <option> Rajasthan</option>
+            <option>Jharkhand</option>
+            <option>Nagaland</option>
+            <option>Andaman&Nicobar</option>
+            <option>Jammu Kashmir</option>
+            <option> Andra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option> Assam</option>
+            <option> Bihar</option>
+            <option> Chattisgarh</option>
+            <option> Goa</option>
+            <option> Gujrat</option>
+            <option> Haryana</option>
+            <option> Punjab</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+</div>
+{% endblock body %}

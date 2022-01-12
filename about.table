@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{%block title %}About{%endblock title %}
+
+{%block body %}This is my About Block
+Please Ente your smatphone Budget
+
+<!-- On tables -->
+<table class="table-primary">Mid-Range Phones</table>
+<table class="table-secondary">Above 20000</table>
+<table class="table-success">S series</table>
+<table class="table-danger">Note Series</table>
+<table class="table-warning">Fold</table>
+<table class="table-info">Flip</table>
+<table class="table-light">Tablet</table>
+<table class="table-dark">Laptop</table>
+
+<!-- On rows -->
+<tr class="table-primary">F series</tr>
+<tr class="table-secondary">M series</tr>
+<tr class="table-success">A series</tr>
+<tr class="table-danger">1</tr>
+<tr class="table-warning">2</tr>
+<tr class="table-info">3</tr>
+<tr class="table-light">4</tr>
+<tr class="table-dark">5</tr>
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <td class="table-primary">S series</td>
+  <td class="table-secondary">F series</td>
+  <td class="table-success"> M series</td>
+  <td class="table-danger">6</td>
+  <td class="table-warning">7</td>
+  <td class="table-info">8</td>
+  <td class="table-light">9</td>
+  <td class="table-dark">10</td>
+</tr>
+{% endblock body %}
